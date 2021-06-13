@@ -1,0 +1,170 @@
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes rotate {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+.engine {
+  -webkit-animation: 2s rotate linear infinite;
+  animation: 2s rotate linear infinite;
+  -webkit-transform-origin: 50% 50%;
+  transform-origin: 80% 80%;
+}
+#brackets {
+  animation-name: animacion;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+@keyframes animacion {
+  from {
+    transform: translateX(0px);
+  }
+  to {
+    transform: translateX(150px);
+  }
+}
+.banner-container {
+  display: flex;
+  justify-content: center;
+}
+
+section {
+  padding: 10px;
+}
+
+.section-uno {
+  border: 1px solid $black;
+  padding: 5px;
+  margin: 5px;
+
+  &__card {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.card {
+  position: relative;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 0.25rem;
+  padding: 5px;
+  margin-bottom: 10px;
+
+  p {
+    font-family: $poppins;
+    font-weight: $poppins-regular;
+    font-size: $small;
+  }
+  &__body {
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    min-height: 1px;
+  }
+  &__title {
+    font-family: $poppins;
+    font-weight: $poppins-bold;
+    font-size: $large;
+    margin-bottom: 0.75rem;
+    margin: 0 0.5rem;
+  }
+  &__text {
+    font-family: $poppins;
+    font-weight: $poppins-regular;
+    font-size: $small;
+    text-align: justify;
+    margin: 0 0.5rem;
+  }
+}
+
+.section-dos {
+  border: 1px solid $black;
+  padding: 5px;
+  margin: 5px 0.5rem;
+  display: flex;
+  justify-content: center;
+  text-align: justify;
+
+  &__titulo {
+    text-align: center;
+    font-family: $poppins;
+    font-weight: $poppins-bold;
+    font-size: $medium;
+  }
+
+  &__img img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 1px solid $black;
+    display: block;
+    margin: auto;
+  }
+
+  &__redes {
+    text-align: center;
+    font-family: $poppins;
+    font-weight: $poppins-bold;
+    font-size: $small;
+    span {
+      margin: 0 0.2rem;
+    }
+  }
+
+  &__texto {
+    font-family: $poppins;
+    font-weight: $poppins-regular;
+    margin: 0 0.5rem;
+  }
+
+  &__cursos {
+    height: 40px;
+    text-align: center;
+    color: $white;
+    font-family: $poppins;
+    font-weight: $poppins-bold;
+    font-size: $small;
+    background-color: $grey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__lista {
+    margin-top: 1.5rem;
+    ul {
+      list-style: circle;
+      margin: 0 0.5rem;
+    }
+    li {
+      margin-left: 1rem;
+      margin-bottom: 0.1rem;
+    }
+  }
+  svg {
+    display: block;
+    margin: auto;
+    height: 200px;
+    width: 200px;
+  }
+}
